@@ -1,38 +1,38 @@
 <template>
     <li>
-        <div>
-            <header>
-                <h3>{{ title }}</h3>
-                <button>Delete</button>
-            </header>
-        </div>
+      <base-card>
+          <header>
+              <h3>{{ title }}</h3>
+              <button>Delete</button>
+          </header>
         <p>{{ description }}</p>
         <nav>
             <a :href="link">View Resource</a>
         </nav>
+      </base-card>
     </li>
 </template>
 
 <script>
 export default {
-    props: {
-        id: {
-            type: String,
-            required: true
-        },
-        title: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: true
-        },
-        link: {
-            type: String,
-            required: true
-        },
-    }
+  props: {
+      id: {
+          type: String,
+          required: true
+      },
+      title: {
+          type: String,
+          required: true
+      },
+      description: {
+          type: String,
+          required: true
+      },
+      link: {
+          type: String,
+          required: true
+      },
+  }
 }
 </script>
 
